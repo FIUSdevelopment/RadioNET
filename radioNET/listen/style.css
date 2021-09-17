@@ -1,0 +1,19 @@
+body {
+	background-image: url("../image/sfondo.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#titlep {
+	color: white;
+	font-family: sans-serif;
+	font-size: 90px;
+	background-image: url("image/Senzatitolo-3.png");
+}
+#title {
+	position: relative;
+	text-align: center;
+}
+#videoplayer {
+	position: relative;
+	text-align: center;
+}
