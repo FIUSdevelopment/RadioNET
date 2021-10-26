@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body onload="getAdminLink()">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li id="AdminLink"></li>
+          <li><a href="/listen">Ascolta</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="title" style="text-align: center">RadioNet</h1><br>
+      <p id="description" style="text-align: center">Una radio online che ti permette di ascoltare musica <br>Caricata dai nostri moderatori.</p><br>
+      <p style="text-align: center"><a class="waves-effect waves-light btn-small listen-button">Ascolta ora</a></p>
+    </div>
+    <script type="text/javascript" src="../static/js/materialize.js"></script>
+    <footer class="page-footer foot">
+      <div class="container foot-container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">RadioNet</h5>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/BlackdestinyXX">Bl4ckdestinyXX</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://discord.gg/nmuNC4gJtD">FIUS</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://fius.online">FIUS Website</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 Copyright FIUS
+        </div>
+      </div>
+    </footer>
+    <script>
+      function getAdminLink() {
+        if(localStorage.getItem("username") && localStorage.getItem("password")) {
+          document.getElementById("AdminLink").innerHTML = `<a href="/dashboard">Admin Dashboard</a>`
+        } else {
+          document.getElementById("AdminLink").innerHTML = `<a href="/login">Login</a>`
+        }
+      }
+    </script>
+  </body>
+</html>
